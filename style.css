@@ -1,0 +1,500 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #04060d;
+    color: #D3D4D7;     /* text color */
+
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-size:  45%;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-position: right 35% bottom 45%;
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #D3D4D7;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #143aa2;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+}
+.header-text h1 span{
+    color: #143aa2;
+}
+
+/*------------about-------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+    object-position: bottom;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 500px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.about-col-2 p.summary{
+    font-size: 20px;
+    color: #D3D4D7;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #D3D4D7;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #143aa2;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #3e8de3;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* ------------------portfolio---------------- */
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+}
+.row-1{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.row-2{
+    display: none;
+}
+.row-2.show {
+    display: grid;
+    /* Other styles for the shown row-2 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #143aa2);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    text-decoration: none;
+    color: #D3D4D7;
+    font-size: 30px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #143aa2;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #D3D4D7;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: #143aa2;
+}
+
+/* ---------------- contact --------------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #143aa2;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+    text-align: center;
+    position: relative;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 50px;
+    margin-right: 70px;
+    color: #ababab;
+    display: inline-block;
+    transition: transforma 0.5s;
+
+    
+}
+.social-icons a:hover{
+    color: #143aa2;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #143aa2;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #D3D4D7;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: left;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright p{
+    padding-left: 10px;
+}
+
+/* Style the tooltip for email */
+#tooltip {
+    display: none; /* Initially hide the tooltip */
+    position: absolute; /* Position the tooltip absolutely */
+    top: 60px; /* Adjust the bottom position to center above the email icon */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: #333; /* Background color of the tooltip */
+    color: #fff; /* Text color of the tooltip */
+    padding: 5px 15px; /* Increase the padding for a wider tooltip */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 12px; /* Adjust the font size */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    z-index: 1; /* Ensure tooltip is above the triangle */
+  }
+  
+  /* Show the tooltip for email on hover */
+  #mail-link:hover #tooltip {
+    display: block;
+  }
+  
+  /* Triangle styles */
+  .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #333; /* Color of the triangle */
+    top: -10px; /* Adjust this value to position the triangle */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0; /* Ensure the triangle is below the tooltip text */
+  }
+
+
+  /* modal styling */
+
+  /* Style the modal container */
+.modal {
+    display: none; /* Hide the modal by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Style the modal content */
+.modal-content {
+    background-color: #262626;
+    color: #D3D4D7;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative; /* Add this position property for the close button */
+    width: 50%;
+    max-height: 80%; /* Set a maximum height for the modal */
+    overflow-y: auto;
+}
+.modal-content h2, h3{
+    text-align: center;
+}
+.modal-content h3 i{
+    margin-right: 20px;
+    font-size: 25px;
+}
+/* Style the nested list items */
+.modal-content ul li {
+    margin-left: 20px; /* Adjust the indentation as needed */
+}
+/* Style the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10000; /* Ensure the close button is on top of the modal content */
+}
+
+
+
+.typewriter {
+    margin-top: 20%;
+}
+
+.typewriter h1 {
+    font-size: 6vw;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid #143aa2; /* The typewriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #143aa2; }
+}
+
+#line-welcome{
+    font-size: 3vw;
+}
+
+
+
+/* --------------------css for small screens (mobile)----------------- */
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    #header{
+        background-size: 100%;
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #143aa2;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+
+    .social-icons a{
+        margin-right: 60px;
+    }
+    #tooltip{
+        padding: 5px 10px;
+        font-size: 9px;
+    }
+    .typewriter {
+        margin-top: 100%;
+    }
+    .modal-content{
+        max-height: 80%; /* Set a maximum height for the modal */
+        overflow-y: auto;
+        width: 80%;
+    }
+    .typewriter h1{
+        font-size: 40px;
+    }
+    #line-welcome{
+        font-size: 20px;
+    }
+}

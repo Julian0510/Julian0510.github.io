@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content='width=device-width', initial-scale=1.0>
+        <title>Julian's Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+        <script src="https://kit.fontawesome.com/cecb67b620.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img class="logo"></img>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <i class="fa-solid fa-times" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="typewriter">
+                    <h1 id="line1">Hi, I'm Julian.</h1>
+                </div>                
+                <h1 id="line-welcome">welcome to my website!</h1>                            
+            </div>
+        </div>
+<!-- -----------------about------------> 
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/FullSizeRender-preview.jpg"> <!-- probably change image used -->
+                    </div> 
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p class="summary">I am a recent Computer Science graduate from California.
+                             I have been coding for over 4 years now and have worked on numerous projects and applications.
+                              I am currently open for work. I enjoy problem solving, software development, and web development.
+                        </p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('extra-curriculars')">Extra Curriculars</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>App Development</span><br>Building Python, Java, and C++ applications</li>
+                                <li><span>Web Development</span><br>Web app development using React, NodeJS, and TypeScript</li>
+                                <li><span>App Development</span><br>Building Android/iOS apps</li> 
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2023</span><br>Computer Science Capstone project, Plagiarism Detection App</li>
+                                <li><span>2021 - 2022</span><br>Internship at Codeday Labs</li>
+                                <li><span>2019</span><br>City of Salinas tree cutting form</li>
+                                <li><span>2019</span><br>Video Game Review Website</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="extra-curriculars">
+                            <ul>
+                                <li><span>2019-2023</span><br>CTI - Accelerate</li>
+                                <li><span>2019-2023</span><br>Programming Team</li>
+                                <li><span>2019</span><br>CSUMB Startup Hackathon</li>
+                                <li><span>2019</span><br>Google Computer Science Summer Institute</li> 
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023</span><br>Bachelors in Computer Science from Cal State Monterey Bay</li>
+                            </ul>
+                        </div>
+
+                        <div class="social-icons">
+                            <a href="#" id="mail-link">
+                              <i class="fa-solid fa-square-envelope" id="envelope"></i>
+                              <!-- Tooltip element for email -->
+                              <div class="tooltip" id="tooltip">
+                                <div class="tooltip-content">Click to copy email address</div>
+                                <div class="triangle"></div> <!-- Triangle is inside the tooltip -->
+                              </div>
+                            </a>
+                            <a href="https://www.linkedin.com/in/julian-diaz-a39190195/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/Julian0510"><i class="fa-brands fa-square-github"></i></a>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+<!----------------------- portfolio ---------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="row-1">
+                    <div class="work">
+                        <img src="images/work-1.png">
+                        <div class="layer">
+                            <h3>Plagiarism Detection App</h3>
+                            <p>A web application that allows teachers to combat cheating through detecting signs in plagiarism in student submitted coding assignments</p>
+                            <a href="#1" class="open-modal"><i class="fa-solid fa-circle-info"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-2.png">
+                        <div class="layer">
+                            <h3>WeVote Open-Source Project</h3>
+                            <p>Contributed to the opensource WeVote project. The WeVote website has over 40,000 users and aims to improve voter participation across the US.</p>
+                            <a href="#2" class="open-modal"><i class="fa-solid fa-circle-info"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-3.png">
+                        <div class="layer">
+                            <h3>Typing Test App</h3>
+                            <p>A web application that allows the user to both measure and improve their typing speed</p>
+                            <a href="#3" class="open-modal"><i class="fa-solid fa-circle-info"></i></a>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- hidden projects start -->
+                <div class="row-2">
+                    <div class="work">
+                        <img src="images/work-4.png">
+                        <div class="layer">
+                            <h3>Election Data Aggregation Applications</h3>
+                            <p>A collection of applications that help aggregate and clean up election and census data</p>
+                            <a href="#4" class="open-modal"><i class="fa-solid fa-circle-info"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-5.png">
+                        <div class="layer">
+                            <h3>Tree Cutting Request Form App</h3>
+                            <p>A website where users submit requests to have their trees cut down by the city. Replaced the antiquated paper form system that was originally in-place.</p>
+                            <a href="#5" class="open-modal"><i class="fa-solid fa-circle-info"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-6.png">
+                        <div class="layer">
+                            <h3>Video Game Review Website</h3>
+                            <p>A website where the user can search up the review scores for any video game they want</p>
+                            <a href="#6" class="open-modal"><i class="fa-solid fa-circle-info"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!-- hidden projects end -->
+            </div>
+
+            <a id="see-more-btn" class="btn">Show more</a>
+        
+        </div>
+    </div>
+   
+
+        <div class="copyright">
+            <p>© 2023 Julian Diaz</p>
+        </div>
+    </div>
+
+    <div class="modal" id="1">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Plagiarism Detection App</h2>
+            <h3><i class="fa-brands fa-node-js"></i><i class="fa-brands fa-python"></i></h3>
+            <p>This project was completed over a 4 month period from February 2023 to May 2023. The work was done together in a team of 6. The inspiration for this project was
+                that a Computer Science professor at the local community college wanted to crack down on code sharing and cheating among his students, so he asked our team to build him
+                an application that would be able to detect signs of plagiarism, as well as discourage students from cheating. The final product that we presented to him was a fully functioning Node.JS application that had numerous anti-cheating 
+                features built-in. These features included:
+                <li>A web scraper that searches the web for specific exam/homework questions that may have been posted without the consent of the original author on websites like Chegg</li>
+                <li>A document reader that works in tandem with the web scraper. It parses these files for homework/exam questions, which are then searched on the web by the web scraper.</li>
+                <li>A Similarity Checker that compared student code and assigned a score based on how similar one student's code was to another</li>                
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="2">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>WeVote Open-Source Project</h2>
+            <h3><i class="fa-brands fa-react"></i><i class="fa-brands fa-node-js"></i><i class="fa-brands fa-js"></i></h3>
+            <p>This project was completed done as part of a 2 month internship for Codeday Labs during the summer of 2022. I worked in a team of 3 on the open-source WeVote
+                project. The work included helping to refactor the codebase as well as doing full-stack support, helping fix bugs or inconsistencies. This was my first open-source project
+                and I'm happy that my contributions got accepted. The right to vote is sacred in this country, so I'm glad that I got to be a part of something that encourages people to exercise
+                their right to vote.                 
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="3">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Typing Test App</h2>
+            <h3><i class="fa-brands fa-react"></i><i class="fa-brands fa-node-js"></i><i class="fa-brands fa-js"></i></h3>
+            <p>
+                This project was completed as part of a 2 month internship for Codeday Labs during the summer of 2021. I along with 2 others worked together to build a web application that 
+                allowed the user to both measure as well as improve their typing speed. The user would get 1 minute to type a randomly generated paragraph, and then when time was up
+                they'd get their wpm (words-per-minute) as well as a count of how many mistakes they made during the attempt. The user could then opt to retake the test again for as many times
+                as they liked in order to improve their wpm. The application generated a paragraph through the use of an api, and we used the React and NodeJS frameworks to build the app. 
+
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="4">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Election Data Aggregation Applications</h2>
+            <h3><i class="fa-brands fa-python"></i></h3>
+            <p>
+                Over the years I've made numerous mini applications that help aggregate and clean up election and census data from all across the USA. All of these application were
+                coded in Python and utilized the pandas data science library. Some of these applications are:
+                <ul>
+                    <li>California voting precinct to census block conversion:
+                        <ul>
+                            <li>Converts Califronia precinct data to census blocks, making it easier to analyze as well as see electoral changes over the years</li>
+                        </ul>
+                    </li>
+                    <li>US Census data aggregated by congressional district:
+                        <ul>
+                            <li>Aggregates the data provided by the US Census department by the congressional districts that are currently in use for the 118th congress. The data created a demographic profile
+                                of the residents living in these districts which included information pertaining to race,
+                                median household income, and percentage of adults over the age of 25 with a college degree.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Michigan precinct data aggregated by municipality:
+                        <ul>
+                            <li>Aggregates the voting precinct election data provided by the Michigan Secretary of State by municipality. This made the data more user friendly and readable, as well
+                                as made it such that it would be easier to analyze electoral changes over the years. 
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="5">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Tree Cutting Request Form App</h2>
+            <h3><i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i></i><i class="fa-brands fa-js"></i></h3>
+            <p>
+                This application was built during the 2019 CSUMB Startup Hackathon. Over the course of 3 days, my team and I built an application that would help streamline the
+                city of Salinas' tree cutting request form. While this project wasn't anything flashy, it did improve the way the city handled tree cutting requests. Before you would have 
+                to submit a paper form to city hall, which is inconvenient and cumbersome. Our app streamlined the process by making it online. Now if you wanted a tree removed all you had to 
+                do was submit an online form. 
+            </p>
+        </div>
+    </div>
+
+    <div class="modal" id="6">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Video Game Review Website</h2>
+            <h3><i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i></i><i class="fa-brands fa-python"></i></i></h3>
+            <p>
+                This application was built during the summer of 2019 while I was taking part of Google's Computer Science Summer Institute. I along with a team of 4 others 
+                built a website that allowed the user to search up any videogame and find the review scores for it. The website used the Metacritic API when searching for review scores. 
+            </p>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+
+    </body>
+</html>
